@@ -1,6 +1,14 @@
 services:
+  redis:
+    image: redis
+    container_name: redis-local
+    ports:
+      - "6379:6379"
   hello-world:
     build: .
     container_name: hello-world-python
     ports:
       - "5050:5050"
+    environment:
+      redis_host: host.docker.internal
+      redis_port: 6379

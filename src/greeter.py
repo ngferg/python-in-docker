@@ -5,6 +5,6 @@ class Greeter(object):
         return self.greet('World')
 
     def greet(self, name: str) -> str:
-        greeting = Greeting(f'Hello, {name}!')
+        greeting = Greeting(name)
         return greeting.json()
 
