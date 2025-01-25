@@ -1,0 +1,6 @@
+services:
+  hello-world:
+    build: .
+    container_name: hello-world-python
+    ports:
+      - "5050:5050"
