@@ -13,6 +13,11 @@ def hello_world():
 def greet(name: str):
     return greeter.greet(name)
 
+@app.route('/greet/<name>/reset', methods=['PATCH'])
+def reset(name: str):
+    res = greeter.reset(name)
+    return res
+
 @app.after_request
 def add_header(response):
     response.headers['Content-Type'] = 'application/json'

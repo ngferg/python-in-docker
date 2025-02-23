@@ -8,3 +8,7 @@ class Greeter(object):
         greeting = Greeting(name)
         return greeting.json()
 
+    def reset(self, name: str) -> str:
+        greeting = Greeting(name)
+        greeting.reset()
+        return greeting.json()
